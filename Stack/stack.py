@@ -43,6 +43,16 @@ class Stack:
       if self._top==-1:
         self._top=None
       return temp
+  def is_empty(self):
+      if self._top is None:
+        return True
+      return False
+
+  def is_full(self):
+      if self._top is not None:
+        if self._top+1==self.size:
+          return True
+      return False
 stack=Stack(3)
 stack.push(10)
 stack.push(20)
