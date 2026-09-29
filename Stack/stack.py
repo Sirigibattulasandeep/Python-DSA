@@ -47,7 +47,6 @@ class Stack:
       if self._top is None:
         return True
       return False
-
   def is_full(self):
       if self._top is not None:
         if self._top+1==self.size:
