@@ -3,6 +3,7 @@ class Stack:
     self._a=[]
     self._top=None
     self.size=size
+
   def push(self,data):
     if self._top is not None:
         if self._top+1==self.size:
@@ -20,10 +21,12 @@ class Stack:
       ar.append(data)
       self._a=ar
       self._top+=1
+
   def peek(self):
     if self._top is None:
       return "No element"
     return self._a[self._top]
+  
   def append(self,data):
       if self._top is None:
         self._a.append(data)
@@ -31,6 +34,7 @@ class Stack:
       else:
         self._a.append(data)
         self._top+=1
+
   def pop(self):
       if self._top is None:
           return "Stack Underflow"
@@ -43,15 +47,18 @@ class Stack:
       if self._top==-1:
         self._top=None
       return temp
+  
   def is_empty(self):
       if self._top is None:
         return True
       return False
+  
   def is_full(self):
       if self._top is not None:
         if self._top+1==self.size:
           return True
       return False
+  
 stack=Stack(3)
 stack.push(10)
 stack.push(20)
