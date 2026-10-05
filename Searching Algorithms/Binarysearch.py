@@ -1,7 +1,7 @@
 #Binary Search
 def binarysearch(a,el):
   l=0
-  r=len(a)-1
+  r=len(a)
   while l<r:
     m=(l+r)//2
     if a[m]==el:
